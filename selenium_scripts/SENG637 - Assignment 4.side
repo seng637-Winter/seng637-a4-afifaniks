@@ -360,6 +360,656 @@
         ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
       ],
       "value": "Sign Out"
+    }, {
+      "id": "467b89b2-5661-4751-a9eb-60f566c7f712",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_account-user",
+      "targets": [
+        ["css=.\\_account-user", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2bd14d0-8442-4177-9ee0-a3b529a588ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_label:nth-child(1)",
+      "targets": [
+        ["css=.\\_label:nth-child(1)", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/div[2]/div/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb1a1081-e3eb-4829-854a-e6c4b60e6b34",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.alertBox-column > span",
+      "targets": [
+        ["css=.alertBox-column > span", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/p/span", "xpath:idRelative"],
+        ["xpath=//p/span", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "7e808edd-6d14-4612-8288-47992bfb8403",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.alertBox-column > span",
+      "targets": [
+        ["css=.alertBox-column > span", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/p/span", "xpath:idRelative"],
+        ["xpath=//p/span", "xpath:position"]
+      ],
+      "value": "You've been logged out of your account successfully."
+    }]
+  }, {
+    "id": "7476af21-4a39-40ea-af6f-efd7632bfca8",
+    "name": "Add_Item_to_Cart",
+    "commands": [{
+      "id": "8f2f1f3f-7ca5-445c-bd1b-3993bf77cf4e",
+      "comment": "",
+      "command": "open",
+      "target": "https://shopsmartcanada.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27184f1d-4533-457f-a86b-4829783ef572",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06768704-6771-4a9e-a9d1-f66811d99af0",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.header-logo-image",
+      "targets": [
+        ["css=.header-logo-image", "css:finder"],
+        ["xpath=//img[@alt='Shop Smart Canada']", "xpath:img"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/h1/a/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "497b1e0a-0023-4817-9c0d-eea74c58c9c1",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.navUser-action:nth-child(3) > .\\_label",
+      "targets": [
+        ["css=.navUser-action:nth-child(3) > .\\_label", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/div/div/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "2c22828f-be36-43a4-b851-9dfb144590ca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navUser-action:nth-child(3) > .\\_label",
+      "targets": [
+        ["css=.navUser-action:nth-child(3) > .\\_label", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/div/div/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "90ae95cc-1ee3-44c8-b9cb-33dd6340689c",
+      "comment": "",
+      "command": "waitForElementEditable",
+      "target": "id=login_email",
+      "targets": [
+        ["id=login_email", "id"],
+        ["name=login_email", "name"],
+        ["css=#login_email", "css:finder"],
+        ["xpath=//input[@id='login_email']", "xpath:attributes"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "d8c5a94c-e02a-4416-98ca-2b624108ed3c",
+      "comment": "",
+      "command": "waitForElementEditable",
+      "target": "id=login_pass",
+      "targets": [
+        ["id=login_pass", "id"],
+        ["name=login_pass", "name"],
+        ["css=#login_pass", "css:finder"],
+        ["xpath=//input[@id='login_pass']", "xpath:attributes"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "4458435b-9a40-48f7-a973-1419d76dfafc",
+      "comment": "",
+      "command": "click",
+      "target": "id=login_email",
+      "targets": [
+        ["id=login_email", "id"],
+        ["name=login_email", "name"],
+        ["css=#login_email", "css:finder"],
+        ["xpath=//input[@id='login_email']", "xpath:attributes"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0cc3e76d-7bb3-457f-958b-06ee45154d9d",
+      "comment": "",
+      "command": "type",
+      "target": "id=login_email",
+      "targets": [
+        ["id=login_email", "id"],
+        ["name=login_email", "name"],
+        ["css=#login_email", "css:finder"],
+        ["xpath=//input[@id='login_email']", "xpath:attributes"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "vzz3wv0uf4@lettershield.com"
+    }, {
+      "id": "57d8e8b5-6822-4cd0-9a05-1958294d4032",
+      "comment": "",
+      "command": "click",
+      "target": "id=login_pass",
+      "targets": [
+        ["id=login_pass", "id"],
+        ["name=login_pass", "name"],
+        ["css=#login_pass", "css:finder"],
+        ["xpath=//input[@id='login_pass']", "xpath:attributes"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae0dc802-4562-4098-911f-757b6badf9f6",
+      "comment": "",
+      "command": "type",
+      "target": "id=login_pass",
+      "targets": [
+        ["id=login_pass", "id"],
+        ["name=login_pass", "name"],
+        ["css=#login_pass", "css:finder"],
+        ["xpath=//input[@id='login_pass']", "xpath:attributes"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "testPassword123"
+    }, {
+      "id": "7ecbf72d-f8f0-471f-a4a8-d7f8a97013a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-actions > .button",
+      "targets": [
+        ["css=.form-actions > .button", "css:finder"],
+        ["xpath=//input[@value='Sign in']", "xpath:attributes"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1081ffef-0378-4e1f-b766-0dbe326f33e5",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.\\_label:nth-child(1)",
+      "targets": [
+        ["css=.\\_label:nth-child(1)", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/div[2]/div/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "afa1ab49-1b0e-48db-9ceb-1a327ff462b9",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=.\\_label:nth-child(1)",
+      "targets": [
+        ["css=.\\_label:nth-child(1)", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/div[2]/div/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": "Sign Out"
+    }, {
+      "id": "b1107ad7-2d84-471a-878b-3ddf5a898a84",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Appliances",
+      "targets": [
+        ["linkText=Appliances", "linkText"],
+        ["css=.navPages-item--id-24 > .navPages-action", "css:finder"],
+        ["xpath=//a[contains(text(),'Appliances')]", "xpath:link"],
+        ["xpath=//div[@id='bf-fix-menu-mobile']/nav/ul/li/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://shopsmartcanada.com/appliances/')]", "xpath:href"],
+        ["xpath=//li/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "22574bc3-d776-4b2b-ba5b-fc1bd43fc966",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.product:nth-child(1) .card-body",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "37295569-9e19-49d6-9f2c-cbc5e084845c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.product:nth-child(1) .card-body",
+      "targets": [
+        ["css=.product:nth-child(1) .card-body", "css:finder"],
+        ["xpath=//div[@id='product-listing-container']/div[2]/ul/li/article/div", "xpath:idRelative"],
+        ["xpath=//article/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca01c9d5-bd21-40ac-9fe5-ff0532049c68",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_focus .\\_qtyAdd > .button",
+      "targets": [
+        ["css=.\\_focus .\\_qtyAdd > .button", "css:finder"],
+        ["xpath=//div[@id='product-listing-container']/div[2]/ul/li/article/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://shopsmartcanada.com/cart.php?action=add&product_id=9967')])[2]", "xpath:href"],
+        ["xpath=//article/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ca6e7bc-ac91-4f5b-b059-f712f21d1f54",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.previewCartAction-checkout > .button",
+      "targets": [
+        ["css=.previewCartAction-checkout > .button", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout now')]", "xpath:link"],
+        ["xpath=//div[@id='cart-preview-dropdown']/div/div[4]/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/checkout')]", "xpath:href"],
+        ["xpath=//div[4]/div/div[2]/a", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "9dcd98a0-a3b2-4eee-ad27-254d71d5f424",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_close:nth-child(1) > .icon:nth-child(1)",
+      "targets": [
+        ["css=.\\_close:nth-child(1) > .icon:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8f221c3-7295-4875-915b-cbf6aec17cb6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navUser-action:nth-child(2) > .\\_label",
+      "targets": [
+        ["css=.navUser-action:nth-child(2) > .\\_label", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/div[2]/div/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab6c5fd4-3850-42b8-8d14-158434bf03e6",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.alertBox-column > span",
+      "targets": [
+        ["css=.alertBox-column > span", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/p/span", "xpath:idRelative"],
+        ["xpath=//p/span", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "bbedb63d-28f2-4655-aab3-3c4b88b9d331",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.alertBox-column > span",
+      "targets": [
+        ["css=.alertBox-column > span", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/p/span", "xpath:idRelative"],
+        ["xpath=//p/span", "xpath:position"]
+      ],
+      "value": "You've been logged out of your account successfully."
+    }]
+  }, {
+    "id": "dcae3937-c381-434e-ae50-1534b88ba186",
+    "name": "Remove_Item_from_Cart",
+    "commands": [{
+      "id": "9aed7442-77d6-4d34-80b9-1f851ebe7293",
+      "comment": "",
+      "command": "open",
+      "target": "https://shopsmartcanada.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36a66bac-a4c2-4406-a61f-874cddcc95a9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68c3fc4f-763a-47ee-ab83-eb4c5692c341",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.header-logo-image",
+      "targets": [
+        ["css=.header-logo-image", "css:finder"],
+        ["xpath=//img[@alt='Shop Smart Canada']", "xpath:img"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/h1/a/div/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "ac2518f5-8846-468b-a8b4-27431bb56842",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.navUser-action:nth-child(3) > .\\_label",
+      "targets": [
+        ["css=.navUser-action:nth-child(3) > .\\_label", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/div/div/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "69c0276a-f31f-422e-b47e-55ccd753100b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navUser-action:nth-child(3) > .\\_label",
+      "targets": [
+        ["css=.navUser-action:nth-child(3) > .\\_label", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/div/div/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c5de552-fd22-467f-b526-b66e8c8cd0ea",
+      "comment": "",
+      "command": "waitForElementEditable",
+      "target": "id=login_email",
+      "targets": [
+        ["id=login_email", "id"],
+        ["name=login_email", "name"],
+        ["css=#login_email", "css:finder"],
+        ["xpath=//input[@id='login_email']", "xpath:attributes"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "395bc135-6838-4dc2-9c38-12c09980037d",
+      "comment": "",
+      "command": "waitForElementEditable",
+      "target": "id=login_pass",
+      "targets": [
+        ["id=login_pass", "id"],
+        ["name=login_pass", "name"],
+        ["css=#login_pass", "css:finder"],
+        ["xpath=//input[@id='login_pass']", "xpath:attributes"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "13edcd75-c27d-477d-a43b-d825651ff3d4",
+      "comment": "",
+      "command": "click",
+      "target": "id=login_email",
+      "targets": [
+        ["id=login_email", "id"],
+        ["name=login_email", "name"],
+        ["css=#login_email", "css:finder"],
+        ["xpath=//input[@id='login_email']", "xpath:attributes"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "802ebd1d-63c1-4814-803d-16a6b10d2a55",
+      "comment": "",
+      "command": "type",
+      "target": "id=login_email",
+      "targets": [
+        ["id=login_email", "id"],
+        ["name=login_email", "name"],
+        ["css=#login_email", "css:finder"],
+        ["xpath=//input[@id='login_email']", "xpath:attributes"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "vzz3wv0uf4@lettershield.com"
+    }, {
+      "id": "a64593ec-ada0-40b1-9dcf-3d371242c28d",
+      "comment": "",
+      "command": "click",
+      "target": "id=login_pass",
+      "targets": [
+        ["id=login_pass", "id"],
+        ["name=login_pass", "name"],
+        ["css=#login_pass", "css:finder"],
+        ["xpath=//input[@id='login_pass']", "xpath:attributes"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d991e081-9cf6-45a4-8e90-2e1f07305b6f",
+      "comment": "",
+      "command": "type",
+      "target": "id=login_pass",
+      "targets": [
+        ["id=login_pass", "id"],
+        ["name=login_pass", "name"],
+        ["css=#login_pass", "css:finder"],
+        ["xpath=//input[@id='login_pass']", "xpath:attributes"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "testPassword123"
+    }, {
+      "id": "fba45d62-bdae-43c7-ad07-f0f33d17b9f0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-actions > .button",
+      "targets": [
+        ["css=.form-actions > .button", "css:finder"],
+        ["xpath=//input[@value='Sign in']", "xpath:attributes"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e4d2f4b-1c96-4f44-9410-10a0eac30ca0",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.\\_label:nth-child(1)",
+      "targets": [
+        ["css=.\\_label:nth-child(1)", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/div[2]/div/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "579d3480-d67e-4d3f-a981-3a3874d661db",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=.\\_label:nth-child(1)",
+      "targets": [
+        ["css=.\\_label:nth-child(1)", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/div[2]/div/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": "Sign Out"
+    }, {
+      "id": "c12b0793-b4d8-4c08-9903-a73b37f00b18",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Appliances",
+      "targets": [
+        ["linkText=Appliances", "linkText"],
+        ["css=.navPages-item--id-24 > .navPages-action", "css:finder"],
+        ["xpath=//a[contains(text(),'Appliances')]", "xpath:link"],
+        ["xpath=//div[@id='bf-fix-menu-mobile']/nav/ul/li/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://shopsmartcanada.com/appliances/')]", "xpath:href"],
+        ["xpath=//li/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e3cf2f1-6beb-4756-baab-f60a50e949d0",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.product:nth-child(1) .card-body",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "1358e106-b5f0-4a0d-8e0b-33da3fa39093",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.product:nth-child(1) .card-body",
+      "targets": [
+        ["css=.product:nth-child(1) .card-body", "css:finder"],
+        ["xpath=//div[@id='product-listing-container']/div[2]/ul/li/article/div", "xpath:idRelative"],
+        ["xpath=//article/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2bd04b5-b2ef-440e-b158-6ae109b63c6e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_focus .\\_qtyAdd > .button",
+      "targets": [
+        ["css=.\\_focus .\\_qtyAdd > .button", "css:finder"],
+        ["xpath=//div[@id='product-listing-container']/div[2]/ul/li/article/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://shopsmartcanada.com/cart.php?action=add&product_id=9967')])[2]", "xpath:href"],
+        ["xpath=//article/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e57b185-ef0e-4f80-ab12-c49cd0145225",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.previewCartAction-checkout > .button",
+      "targets": [
+        ["css=.previewCartAction-checkout > .button", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout now')]", "xpath:link"],
+        ["xpath=//div[@id='cart-preview-dropdown']/div/div[4]/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/checkout')]", "xpath:href"],
+        ["xpath=//div[4]/div/div[2]/a", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "1e6219f0-5a3b-4b99-bb50-3bf0ed140c29",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=span > .\\_label:nth-child(1)",
+      "targets": [
+        ["css=span > .\\_label:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='cart-preview-dropdown']/div/div[2]/h2/span/span", "xpath:idRelative"],
+        ["xpath=//h2/span/span", "xpath:position"]
+      ],
+      "value": "Your Cart"
+    }, {
+      "id": "9cc1c687-7fba-43d0-b29a-c08ffb9ed915",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=span > span:nth-child(3)",
+      "targets": [
+        ["css=span > span:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='cart-preview-dropdown']/div/div[2]/h2/span/span[2]", "xpath:idRelative"],
+        ["xpath=//h2/span/span[2]", "xpath:position"]
+      ],
+      "value": "(1)"
+    }, {
+      "id": "dab0f061-924c-4242-b04a-a04809c22321",
+      "comment": "",
+      "command": "click",
+      "target": "css=.previewCartItem-quantity .button:nth-child(1) svg",
+      "targets": [
+        ["css=.previewCartItem-quantity .button:nth-child(1) svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d8f94d4-61c7-469a-97aa-142e3b0639b7",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "css=.previewCartAction-checkout > .button",
+      "targets": [
+        ["css=.previewCartAction-checkout > .button", "css:finder"],
+        ["xpath=//a[contains(text(),'Checkout now')]", "xpath:link"],
+        ["xpath=//div[@id='cart-preview-dropdown']/div/div[4]/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/checkout')]", "xpath:href"],
+        ["xpath=//div[4]/div/div[2]/a", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "51d30a85-fd01-4628-b02a-fd08dc22be05",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.u-hideMobile .\\_single-item",
+      "targets": [
+        ["css=.u-hideMobile .\\_single-item", "css:finder"],
+        ["xpath=//div[@id='bf-fix-menu-mobile']/a/span/span/span[2]/span", "xpath:idRelative"],
+        ["xpath=//div/a/span/span/span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ab3cf8f-e032-4cb2-bdd1-411fb45363ad",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.u-hideMobile .countPill",
+      "targets": [
+        ["css=.u-hideMobile .countPill", "css:finder"],
+        ["xpath=//div[@id='bf-fix-menu-mobile']/a/span/span/span", "xpath:idRelative"],
+        ["xpath=//div/a/span/span/span", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "74f8c26b-01bb-4739-8723-765aa9daa9f8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.\\_label:nth-child(1)",
+      "targets": [
+        ["css=.\\_label:nth-child(1)", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/div[2]/div/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5876c98-e1db-4d89-9fad-c805084bfc1d",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.alertBox-message",
+      "targets": [
+        ["css=.alertBox-message", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "734142e7-b27a-475a-9d0e-cc90ab459136",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.alertBox-column > span",
+      "targets": [
+        ["css=.alertBox-column > span", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/p/span", "xpath:idRelative"],
+        ["xpath=//p/span", "xpath:position"]
+      ],
+      "value": "You've been logged out of your account successfully."
     }]
   }],
   "suites": [{
