@@ -900,7 +900,7 @@
     }, {
       "id": "8e57b185-ef0e-4f80-ab12-c49cd0145225",
       "comment": "",
-      "command": "waitForElementVisible",
+      "command": "waitForElementPresent",
       "target": "css=.previewCartAction-checkout > .button",
       "targets": [
         ["css=.previewCartAction-checkout > .button", "css:finder"],
@@ -922,85 +922,103 @@
       ],
       "value": "Your Cart"
     }, {
-      "id": "9cc1c687-7fba-43d0-b29a-c08ffb9ed915",
+      "id": "a93633f9-bb8c-478f-8dae-9a7874270573",
       "comment": "",
-      "command": "assertText",
-      "target": "css=span > span:nth-child(3)",
+      "command": "waitForElementVisible",
+      "target": "css=.previewCartItem-remove-icon use",
       "targets": [
-        ["css=span > span:nth-child(3)", "css:finder"],
-        ["xpath=//div[@id='cart-preview-dropdown']/div/div[2]/h2/span/span[2]", "xpath:idRelative"],
-        ["xpath=//h2/span/span[2]", "xpath:position"]
-      ],
-      "value": "(1)"
-    }, {
-      "id": "dab0f061-924c-4242-b04a-a04809c22321",
-      "comment": "",
-      "command": "click",
-      "target": "css=.previewCartItem-quantity .button:nth-child(1) svg",
-      "targets": [
-        ["css=.previewCartItem-quantity .button:nth-child(1) svg", "css:finder"]
-      ],
-      "value": ""
-    }, {
-      "id": "2d8f94d4-61c7-469a-97aa-142e3b0639b7",
-      "comment": "",
-      "command": "waitForElementNotPresent",
-      "target": "css=.previewCartAction-checkout > .button",
-      "targets": [
-        ["css=.previewCartAction-checkout > .button", "css:finder"],
-        ["xpath=//a[contains(text(),'Checkout now')]", "xpath:link"],
-        ["xpath=//div[@id='cart-preview-dropdown']/div/div[4]/div/div[2]/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, '/checkout')]", "xpath:href"],
-        ["xpath=//div[4]/div/div[2]/a", "xpath:position"]
+        ["css=.previewCartItem-remove-icon use", "css:finder"]
       ],
       "value": "10000"
     }, {
-      "id": "51d30a85-fd01-4628-b02a-fd08dc22be05",
+      "id": "b3a2045c-2cb3-4b66-9a07-72fd8980490f",
       "comment": "",
-      "command": "mouseOver",
-      "target": "css=.u-hideMobile .\\_single-item",
+      "command": "click",
+      "target": "css=.previewCartItem-remove-icon use",
       "targets": [
-        ["css=.u-hideMobile .\\_single-item", "css:finder"],
-        ["xpath=//div[@id='bf-fix-menu-mobile']/a/span/span/span[2]/span", "xpath:idRelative"],
-        ["xpath=//div/a/span/span/span[2]/span", "xpath:position"]
+        ["css=.previewCartItem-remove-icon use", "css:finder"]
       ],
       "value": ""
     }, {
-      "id": "9ab3cf8f-e032-4cb2-bdd1-411fb45363ad",
+      "id": "81673e4e-f394-4e6a-bad4-b2db4626c023",
       "comment": "",
-      "command": "assertText",
-      "target": "css=.u-hideMobile .countPill",
+      "command": "waitForElementVisible",
+      "target": "css=.previewCart-emptyBody",
       "targets": [
-        ["css=.u-hideMobile .countPill", "css:finder"],
-        ["xpath=//div[@id='bf-fix-menu-mobile']/a/span/span/span", "xpath:idRelative"],
-        ["xpath=//div/a/span/span/span", "xpath:position"]
+        ["css=.previewCart-emptyBody", "css:finder"],
+        ["xpath=//div[@id='cart-preview-dropdown']/div/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div", "xpath:position"]
       ],
-      "value": "0"
+      "value": "10000"
     }, {
-      "id": "74f8c26b-01bb-4739-8723-765aa9daa9f8",
+      "id": "03964642-c2a6-48a8-9bea-305b08b510d1",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.previewCart-emptyBody",
+      "targets": [
+        ["css=.previewCart-emptyBody", "css:finder"],
+        ["xpath=//div[@id='cart-preview-dropdown']/div/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div", "xpath:position"]
+      ],
+      "value": "Your cart is empty"
+    }, {
+      "id": "af659e08-a696-42e8-a075-5c5990f6bc09",
       "comment": "",
       "command": "click",
-      "target": "css=.\\_label:nth-child(1)",
+      "target": "css=.\\_close:nth-child(1) > .icon:nth-child(1) > use",
       "targets": [
-        ["css=.\\_label:nth-child(1)", "css:finder"],
+        ["css=.\\_close:nth-child(1) > .icon:nth-child(1) > use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9cc062d-6767-42a2-ad28-e4fff17dd633",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.navUser-action:nth-child(2) > .\\_label",
+      "targets": [
+        ["css=.navUser-action:nth-child(2) > .\\_label", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/div[2]/div/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "7150721c-8ba8-4d7b-864f-f9bdd360eb20",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.navUser-action:nth-child(2) > .\\_label",
+      "targets": [
+        ["css=.navUser-action:nth-child(2) > .\\_label", "css:finder"],
         ["xpath=//body[@id='topOfPage']/header/div/div[2]/div[2]/div/div/a[2]/span", "xpath:idRelative"],
         ["xpath=//a[2]/span", "xpath:position"],
         ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "b5876c98-e1db-4d89-9fad-c805084bfc1d",
+      "id": "2ae23ab3-06e5-4cf7-bbe0-681b927a09cd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navUser-action:nth-child(2) > .\\_label",
+      "targets": [
+        ["css=.navUser-action:nth-child(2) > .\\_label", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/header/div/div[2]/div[2]/div/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6aa464e2-fb16-4916-82e6-3fde7d86ac2e",
       "comment": "",
       "command": "waitForElementVisible",
-      "target": "css=.alertBox-message",
+      "target": "css=.alertBox-column > span",
       "targets": [
-        ["css=.alertBox-message", "css:finder"],
-        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/p", "xpath:idRelative"],
-        ["xpath=//p", "xpath:position"]
+        ["css=.alertBox-column > span", "css:finder"],
+        ["xpath=//body[@id='topOfPage']/div[8]/div/div/div/p/span", "xpath:idRelative"],
+        ["xpath=//p/span", "xpath:position"]
       ],
-      "value": "10000"
+      "value": "20000"
     }, {
-      "id": "734142e7-b27a-475a-9d0e-cc90ab459136",
+      "id": "86c307f1-f29c-4db2-af49-774e4a752305",
       "comment": "",
       "command": "assertText",
       "target": "css=.alertBox-column > span",
