@@ -4,3 +4,4 @@
 
 - read [assignment guideline](seng637-a4.md)
 - commit and push output on **Github** ([assignment report template](./seng637-a4-team_number.md))
+- read the [lab report](./seng637-a4-16.md)
