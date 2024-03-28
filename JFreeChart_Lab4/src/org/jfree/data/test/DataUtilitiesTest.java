@@ -1,4 +1,4 @@
-package org.jfree.data;
+package org.jfree.data.test;
 
 import org.jfree.data.DataUtilities;
 import org.jfree.data.Values2D;
@@ -1103,6 +1103,137 @@ public class DataUtilitiesTest {
         assertEquals("Cumulative percentage for second item should be 40%", 0.40, ((Number) result.getValue("Key2")).doubleValue(), 0.01);
         assertEquals("Cumulative percentage for third item should be 100%", 1.00, ((Number) result.getValue("Key3")).doubleValue(), 0.01);
         mockingContext.assertIsSatisfied();
+    }
+    
+    @Test
+    public void testCreateNumberArrayWithNegativeValues() {
+        double[] data = {-1.0, -2.0, -3.0};
+        Number[] expected = {-1.0, -2.0, -3.0};
+        assertArrayEquals(expected, DataUtilities.createNumberArray(data));
+    }
+
+    
+    @Test
+    public void testEqualDifferentArrays() {
+        double[][] array1 = {{1.0, 2.0}, {3.0, 4.0}};
+        double[][] array2 = {{1.0, 2.0}, {3.0, 4.5}};
+        assertFalse(DataUtilities.equal(array1, array2));
+    }
+
+    @Test
+    public void testCreateNumberArray2DWithMixedValues() {
+        double[][] data = {{-1.0, 2.0}, {3.0, -4.0}};
+        Number[][] expected = {{-1.0, 2.0}, {3.0, -4.0}};
+        assertArrayEquals(expected, DataUtilities.createNumberArray2D(data));
+    }
+    
+    @Test
+    public void testEqualWithNestedArrayDifferences() {
+        double[][] array1 = {{1.0, 2.0}, {3.0, 4.0}};
+        double[][] array2 = {{1.0, 2.0}, {3.0, 4.1}}; // Slight difference in last element
+        assertFalse("Arrays with different nested values should not be equal", DataUtilities.equal(array1, array2));
+    }
+
+    @Test
+    public void testCalculateColumnTotalAllNegativeValues() {
+        mockingContext.checking(new Expectations() {{
+            one(values2dMock).getRowCount(); will(returnValue(2));
+            one(values2dMock).getValue(0, 0); will(returnValue(-10.0));
+            one(values2dMock).getValue(1, 0); will(returnValue(-5.0));
+        }});
+
+        double result = DataUtilities.calculateColumnTotal(values2dMock, 0);
+        assertEquals("Total of all negative values should be -15.0", -15.0, result, 0.0000001d);
+    }
+    
+    @Test
+    public void testCalculateColumnTotalWithExtremeValues() {
+        mockingContext.checking(new Expectations() {{
+            one(values2dMock).getRowCount(); will(returnValue(2));
+            one(values2dMock).getValue(0, 0); will(returnValue(Double.MAX_VALUE));
+            one(values2dMock).getValue(1, 0); will(returnValue(Double.MIN_VALUE));
+        }});
+
+        double result = DataUtilities.calculateColumnTotal(values2dMock, 0);
+        assertEquals("Total should handle extreme values without overflow", Double.MAX_VALUE, result, 0.0000001d);
+    }
+    
+    @Test
+    public void testCreateNumberArrayWithNegativeZero() {
+        double[] data = {-0.0};
+        Number[] result = DataUtilities.createNumberArray(data);
+        assertTrue("Array should contain negative zero", Double.compare(-0.0, result[0].doubleValue()) == 0);
+    }
+
+    @Test
+    public void testCloneWithInnerNulls() {
+        double[][] source = new double[2][];
+        source[0] = new double[]{1.0, 2.0};
+        source[1] = null;
+        double[][] cloned = DataUtilities.clone(source);
+        assertNotNull("Cloned array should not be null", cloned);
+        assertNotNull("First inner array should be cloned", cloned[0]);
+        assertNull("Second inner array should remain null", cloned[1]);
+        assertNotSame("Inner array should be a different instance", source[0], cloned[0]);
+    }
+    
+    @Test
+    public void testEqualWithArraysOfDifferentLengths() {
+        double[][] array1 = {{1.0, 2.0}};
+        double[][] array2 = {{1.0, 2.0}, {3.0, 4.0}};
+        assertFalse("Method should return false for arrays of different lengths", DataUtilities.equal(array1, array2));
+    }
+
+    @Test
+    public void testEqualWithNonMatchingSubArrays() {
+        double[][] array1 = {{1.0, 2.0}, {3.0, 4.0}};
+        double[][] array2 = {{1.0, 2.0}, {5.0, 6.0}};
+        assertFalse("Method should return false when sub-arrays are not equal", DataUtilities.equal(array1, array2));
+    }
+    
+    @Test
+    public void testEqualFirstArrayNullSecondArrayNotNull() {
+        double[][] firstArray = null;
+        double[][] secondArray = {{1.0, 2.0}, {3.0, 4.0}};
+        assertFalse("Method should return false when first array is null and second is not", DataUtilities.equal(firstArray, secondArray));
+    }
+
+    @Test
+    public void testEqualSecondArrayNullFirstArrayNotNull() {
+        double[][] firstArray = {{1.0, 2.0}, {3.0, 4.0}};
+        double[][] secondArray = null;
+        assertFalse("Method should return false when second array is null and first is not", DataUtilities.equal(firstArray, secondArray));
+    }
+    
+    @Test
+    public void testEqualArraysDifferentLengths() {
+        double[][] firstArray = {{1.0, 2.0}};
+        double[][] secondArray = {{1.0, 2.0}, {3.0, 4.0}};
+        assertFalse("Method should return false for arrays of different lengths", DataUtilities.equal(firstArray, secondArray));
+    }
+    
+    @Test
+    public void testEqualArraysWithDifferentContents() {
+        double[][] firstArray = {{1.0, 2.0}, {3.0, 4.0}};
+        double[][] secondArray = {{1.0, 2.0}, {3.0, 5.0}}; // Note the difference in the last element
+        assertFalse("Method should return false when arrays have different contents", DataUtilities.equal(firstArray, secondArray));
+    }
+    
+    @Test
+    public void testCreateNumberArrayStandard() {
+        double[] data = {-2.5, 0, 1.5}; // Test data including negative, zero, and positive values
+        Number[] expected = {-2.5, 0.0, 1.5}; // Expected conversion to Number[]
+        Number[] actual = DataUtilities.createNumberArray(data); // Actual output from method
+        assertArrayEquals("Array should correctly convert all types of numbers", expected, actual);
+    }
+
+    // Test method with empty data array
+    @Test
+    public void testCreateNumberArrayEmpty() {
+        double[] data = {}; // Empty data array
+        Number[] expected = {}; // Expected empty Number array
+        Number[] actual = DataUtilities.createNumberArray(data); // Actual output from method
+        assertArrayEquals("Method should return an empty Number array for empty input", expected, actual);
     }
     
     

@@ -1,5 +1,5 @@
 
-package org.jfree.data;
+package org.jfree.data.test;
 
 import static org.junit.Assert.*;
 import org.jfree.data.Range;
@@ -658,9 +658,7 @@ public class RangeTest {
         // Action: calculate hash codes
         int hashCode1 = range1.hashCode();
         int hashCode2 = range2.hashCode();
-        
-        System.out.println(hashCode2);
-        System.out.print(hashCode1);
+
         
         // Assertion: check that equal objects have equal hash codes
         assertEquals("Equal objects must have equal hash codes", hashCode1, hashCode2);
