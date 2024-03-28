@@ -100,6 +100,22 @@ public class RangeTest {
         // Verify that the range contains 3.0
         assertTrue("The range should contain 3.0", range.contains(3.0));
     }
+    
+    @Test
+    public void testContainsWithNumberLowerThanLowerRange() {
+        // Create a range
+        Range range = new Range(1.0, 5.0);
+        
+        assertFalse("The range should not contain -3.0", range.contains(-3.0));
+    }
+    
+    @Test
+    public void testContainsWithNumberGreaterThanUpperRange() {
+        // Create a range
+        Range range = new Range(1.0, 5.0);
+        
+        assertFalse("The range should not contain 30.0", range.contains(30.0));
+    }
 
     @Test
     public void testContainsWithNumberOutsideRange() {
@@ -690,6 +706,20 @@ public class RangeTest {
         assertEquals("The lower bound should be zero when scaled by zero", 0.0, result.getLowerBound(), 0.00001);
         assertEquals("The upper bound should be zero when scaled by zero", 0.0, result.getUpperBound(), 0.00001);
     }
+    
+    @Test
+    public void testScaleWithZeroFactorNegativeRangeZeroFactor() {
+        // Setup: a valid range and a zero scale factor
+        Range base = new Range(-10.0, -5.0);
+        double factor = 0.0;
+        
+        // Action: scale the range
+        Range result = Range.scale(base, factor);
+        
+        // Assertion: both bounds of the scaled range should be zero
+        assertEquals("The lower bound should be zero when scaled by zero", 0.0, result.getLowerBound(), 0.00001);
+        assertEquals("The upper bound should be zero when scaled by zero", 0.0, result.getUpperBound(), 0.00001);
+    }
 
     @Test(expected = IllegalArgumentException.class)
     public void testScaleWithNegativeFactor() {
@@ -748,7 +778,7 @@ public class RangeTest {
         assertEquals("Lower bound should not cross zero", 0.0, shifted.getLowerBound(), 0.00001);
         assertEquals("Upper bound should be reduced correctly", 4.0, shifted.getUpperBound(), 0.00001);
     }
-
+    
     @Test
     public void testShiftWithNoZeroCrossingNegativeValue() {
         // Similar setup for negative value case
