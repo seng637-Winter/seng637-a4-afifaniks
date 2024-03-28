@@ -1807,12 +1807,32 @@
       "targets": [],
       "value": "label=Canada"
     }, {
-      "id": "c2ac765d-79d4-4d3f-9e3a-f3e9b75ad0dd",
+      "id": "9ade7d64-7d6e-4ddf-b7d0-f35b9bff8023",
       "comment": "",
-      "command": "select",
+      "command": "click",
       "target": "id=FormField_12_input",
-      "targets": [],
-      "value": "label=Alberta"
+      "targets": [
+        ["id=FormField_12_input", "id"],
+        ["name=FormField[2][12]", "name"],
+        ["css=#FormField_12_input", "css:finder"],
+        ["xpath=//select[@id='FormField_12_input']", "xpath:attributes"],
+        ["xpath=//div[@id='FormField_12']/select", "xpath:idRelative"],
+        ["xpath=//div[9]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16587246-55d3-4f1d-ba44-e0ba730da756",
+      "comment": "",
+      "command": "click",
+      "target": "css=#FormField_12_input > option:nth-child(2)",
+      "targets": [
+        ["css=#FormField_12_input > option:nth-child(2)", "css:finder"],
+        ["xpath=//option[@value='Alberta']", "xpath:attributes"],
+        ["xpath=//select[@id='FormField_12_input']/option[2]", "xpath:idRelative"],
+        ["xpath=//div[9]/select/option[2]", "xpath:position"],
+        ["xpath=//option[contains(.,'Alberta')]", "xpath:innerText"]
+      ],
+      "value": ""
     }, {
       "id": "d28e571b-f1c9-4b4d-9a8d-c35c1c2b2838",
       "comment": "",
